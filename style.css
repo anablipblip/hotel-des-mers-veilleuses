@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+  color: #15306B;
+  font-family: Georgia, serif;
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+p {
+  opacity: .7;
+}
