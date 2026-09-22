@@ -1,56 +1,65 @@
-html, body {
-  margin: 0;
-  padding: 0;
+html, body{
+margin:0;
+padding:0;
 }
 
-body {
-  background: white;
-  color: #15306B;
-  font-family: Georgia, serif;
-  overflow-x: hidden;
+body{
+background:#ffffff;
+font-family:Georgia, serif;
+color:#17377C;
+overflow-x:hidden;
 }
 
-main {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.surface{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:center;
+padding:6vh 6vw;
+box-sizing:border-box;
 }
 
-.hero {
-  text-align: center;
+.titre{
+text-align:center;
 }
 
-h1 {
-  font-weight: 400;
-  letter-spacing: 1px;
+.titre h1{
+font-size:clamp(2rem,4vw,3.5rem);
+font-weight:400;
+margin-bottom:10px;
 }
 
-p {
-  opacity: .7;
-}
-.hotel-scene{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:40px;
-  padding:40px;
+.titre p{
+opacity:.7;
+margin:0;
 }
 
-.facade-placeholder{
-  width:min(80vw,700px);
-  aspect-ratio:4/5;
-  border:1px dashed #15306B;
-  border-radius:12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#15306B;
-  opacity:.4;
+.hotel-placeholder{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
 }
 
-.intro{
-  text-align:center;
+.cadre-facade{
+width:min(75vw,520px);
+aspect-ratio:4/5;
+border:1px dashed #17377C;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:.45;
+text-align:center;
+padding:20px;
+box-sizing:border-box;
+}
+
+.invitation{
+font-size:.9rem;
+letter-spacing:.2em;
+opacity:.6;
+margin-bottom:10px;
 }
