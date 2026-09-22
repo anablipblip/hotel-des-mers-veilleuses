@@ -94,9 +94,16 @@ margin-bottom:10px;
 }
 
 .fenetre:hover::before{
-  content:attr(data-label);
+ content:attr(data-label);
+  position:absolute;
+  left:50%;
+  top:-28px;
+  transform:translateX(-50%);
+  color:#17377C;
+  font-family:Georgia, serif;
+  font-size:.9rem;
+  white-space:nowrap;
 }
-
 /* Lucarnes */
 
 .lucarne-gauche{
