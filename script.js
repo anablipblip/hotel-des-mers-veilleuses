@@ -1,1 +1,1 @@
-// L'Hôtel des Merveilleuses s'éveillera ici.
+// L'Hôtel des Mers Veilleuses s'éveillera ici.
