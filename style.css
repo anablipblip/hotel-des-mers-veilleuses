@@ -63,3 +63,75 @@ margin-bottom:10px;
   padding:0;
   overflow:visible;
 }
+.hotel-interactif{
+  position:relative;
+  width:min(92vw,780px);
+}
+
+.hotel-interactif img{
+  width:100%;
+  display:block;
+}
+
+.fenetre{
+  position:absolute;
+  border:none;
+  background:transparent;
+  color:transparent;
+  cursor:pointer;
+  border-radius:999px;
+  transition:.35s;
+}
+
+.fenetre:hover{
+  background:rgba(23,55,124,.08);
+  color:#17377C;
+}
+
+.fenetre::after{
+  content:attr(class);
+  display:none;
+}
+
+.fenetre:hover::before{
+  content:attr(data-label);
+}
+
+/* Lucarnes */
+
+.lucarne-gauche{
+  left:14%;
+  top:17%;
+  width:10%;
+  height:13%;
+}
+
+.lucarne-droite{
+  right:14%;
+  top:17%;
+  width:10%;
+  height:13%;
+}
+
+/* Grandes fenêtres */
+
+.grande-gauche{
+  left:10%;
+  top:36%;
+  width:16%;
+  height:28%;
+}
+
+.grande-centre{
+  left:42%;
+  top:36%;
+  width:16%;
+  height:28%;
+}
+
+.grande-droite{
+  right:10%;
+  top:36%;
+  width:16%;
+  height:28%;
+}
