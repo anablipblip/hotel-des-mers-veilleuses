@@ -63,3 +63,15 @@ letter-spacing:.2em;
 opacity:.6;
 margin-bottom:10px;
 }
+.facade{
+width:100%;
+height:auto;
+display:block;
+}
+
+.cadre-facade{
+border:none;
+opacity:1;
+padding:0;
+background:transparent;
+}
