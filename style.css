@@ -43,20 +43,6 @@ justify-content:center;
 width:100%;
 }
 
-.cadre-facade{
-width:min(75vw,520px);
-aspect-ratio:4/5;
-border:1px dashed #17377C;
-border-radius:10px;
-display:flex;
-align-items:center;
-justify-content:center;
-opacity:.45;
-text-align:center;
-padding:20px;
-box-sizing:border-box;
-}
-
 .invitation{
 font-size:.9rem;
 letter-spacing:.2em;
@@ -70,8 +56,12 @@ display:block;
 }
 
 .cadre-facade{
-border:none;
-opacity:1;
-padding:0;
-background:transparent;
+  width:min(92vw,760px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:transparent;
+  border:none;
+  padding:0;
+  overflow:visible;
 }
