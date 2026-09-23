@@ -96,8 +96,9 @@ pointer-events:none;
 }
 
 .portal-group:hover .portal{
-fill:rgba(90,145,255,.10);
-stroke:rgba(90,145,255,.40);
+  opacity:1;
+  fill:rgba(90,145,255,.12);
+  stroke:rgba(90,145,255,.45);
 }
 
 .portal-group:hover .portal-label{
