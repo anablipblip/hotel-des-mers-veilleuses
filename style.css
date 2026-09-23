@@ -231,3 +231,133 @@ width:10%;
 height:24%;
 border-radius:55px;
 }
+/* ===========================
+   Veilleuse V2
+=========================== */
+
+.portal-group{
+  position:relative;
+}
+
+.portal{
+  fill:transparent;
+  stroke:transparent;
+  stroke-width:8;
+  cursor:pointer;
+}
+
+/* Lumière de la chambre */
+
+.portal-glow{
+  opacity:0;
+  transition:.45s ease;
+  fill:rgba(118,171,255,.22);
+  filter:blur(10px);
+}
+
+.portal-group:hover .portal-glow{
+  opacity:1;
+}
+
+/* Bulle */
+
+.portal-bubble{
+
+  position:absolute;
+
+  width:74px;
+  height:74px;
+
+  border-radius:50%;
+
+  background:rgba(246,251,255,.96);
+
+  border:1px solid rgba(126,170,255,.28);
+
+  box-shadow:
+    0 0 22px rgba(132,176,255,.25),
+    inset 0 0 10px rgba(255,255,255,.9);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  pointer-events:none;
+
+  opacity:0;
+
+  transform:translateY(18px) scale(.88);
+
+  transition:.45s cubic-bezier(.22,.9,.26,1);
+
+}
+
+/* apparition */
+
+.portal-group:hover .portal-bubble{
+  opacity:1;
+  transform:translateY(-12px) scale(1);
+}
+
+.portal-word{
+  display:flex;
+  gap:.03em;
+  font-family:Georgia, serif;
+  font-size:13px;
+  letter-spacing:.05em;
+  color:#3b4f77;
+}
+
+/* lettres */
+
+.portal-word span{
+
+  display:inline-block;
+
+  opacity:0;
+
+  transform:translateY(8px);
+
+}
+
+.portal-group:hover .portal-word span{
+
+  animation:letterIn .22s forwards;
+
+}
+
+@keyframes letterIn{
+
+  to{
+
+    opacity:1;
+
+    transform:none;
+
+  }
+
+}
+
+/* envol */
+
+.portal-group:hover .portal-word span:nth-child(1){animation:letterIn .22s forwards, fly 2.6s .9s forwards;}
+.portal-group:hover .portal-word span:nth-child(2){animation:letterIn .22s .05s forwards, fly 2.6s .95s forwards;}
+.portal-group:hover .portal-word span:nth-child(3){animation:letterIn .22s .10s forwards, fly 2.6s 1s forwards;}
+.portal-group:hover .portal-word span:nth-child(4){animation:letterIn .22s .15s forwards, fly 2.6s 1.05s forwards;}
+.portal-group:hover .portal-word span:nth-child(5){animation:letterIn .22s .20s forwards, fly 2.6s 1.1s forwards;}
+.portal-group:hover .portal-word span:nth-child(6){animation:letterIn .22s .25s forwards, fly 2.6s 1.15s forwards;}
+.portal-group:hover .portal-word span:nth-child(7){animation:letterIn .22s .30s forwards, fly 2.6s 1.2s forwards;}
+.portal-group:hover .portal-word span:nth-child(8){animation:letterIn .22s .35s forwards, fly 2.6s 1.25s forwards;}
+.portal-group:hover .portal-word span:nth-child(9){animation:letterIn .22s .40s forwards, fly 2.6s 1.3s forwards;}
+
+@keyframes fly{
+
+  100%{
+
+    transform:translate(-8px,-220px) rotate(-12deg);
+
+    opacity:0;
+
+  }
+
+}
