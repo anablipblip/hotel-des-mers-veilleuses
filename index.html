@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -30,13 +31,15 @@ class="facade">
 
 <!-- Veilleuses -->
 
-<div class="veilleuse lucarne-gauche"></div>
-<div class="veilleuse lucarne-droite"></div>
+<div class="veilleuse lucarne-gauche" data-word="Respirer"></div>
+<div class="veilleuse lucarne-droite" data-word="Croître"></div>
 
-<div class="veilleuse fenetre-gauche"></div>
-<div class="veilleuse fenetre-droite"></div>
+<div class="veilleuse fenetre-gauche" data-word="Veiller"></div>
+<div class="veilleuse fenetre-droite" data-word="Étreindre"></div>
 
-<div class="veilleuse porte"></div>
+<div class="veilleuse fenetre-centrale" data-word="Plonger"></div>
+
+<div class="veilleuse porte" data-word="La Gardienne"></div>
 
 <!-- Carte invisible -->
 
@@ -44,35 +47,66 @@ class="facade">
 viewBox="0 0 744 1052"
 preserveAspectRatio="none">
 
+<!-- Lucarne gauche -->
+
 <a href="#respirer">
-<ellipse class="portal lucarne-gauche-hit"
-cx="188"
-cy="238"
-rx="34"
-ry="46"/>
+<circle class="portal"
+cx="162"
+cy="176"
+r="30"/>
 </a>
+
+<!-- Lucarne droite -->
 
 <a href="#croitre">
-<ellipse class="portal lucarne-droite-hit"
-cx="556"
-cy="238"
-rx="34"
-ry="46"/>
+<circle class="portal"
+cx="582"
+cy="176"
+r="30"/>
 </a>
+
+<!-- Grande fenêtre gauche -->
 
 <a href="#veiller">
-<path class="portal fenetre-gauche-hit"
-d="M214 320 Q214 282 250 282 Q286 282 286 320 L286 540 L214 540 Z"/>
+<path class="portal"
+d="M182 292
+Q182 246 228 246
+Q274 246 274 292
+L274 522
+L182 522 Z"/>
 </a>
+
+<!-- Grande fenêtre droite -->
 
 <a href="#etreindre">
-<path class="portal fenetre-droite-hit"
-d="M458 320 Q458 282 494 282 Q530 282 530 320 L530 540 L458 540 Z"/>
+<path class="portal"
+d="M470 292
+Q470 246 516 246
+Q562 246 562 292
+L562 522
+L470 522 Z"/>
 </a>
 
+<!-- Fenêtre centrale -->
+
 <a href="#plonger">
-<path class="portal porte-hit"
-d="M338 505 Q338 455 372 455 Q406 455 406 505 L406 710 L338 710 Z"/>
+<path class="portal"
+d="M320 402
+Q320 350 372 350
+Q424 350 424 402
+L424 610
+L320 610 Z"/>
+</a>
+
+<!-- Lucarne de porte -->
+
+<a href="#gardienne">
+<path class="portal"
+d="M346 650
+Q346 620 372 620
+Q398 620 398 650
+L398 718
+L346 718 Z"/>
 </a>
 
 </svg>
@@ -116,6 +150,12 @@ Glisser vers les profondeurs
 <section id="plonger" class="palier">
 <div class="palier-contenu">
 <h2>Plonger</h2>
+</div>
+</section>
+
+<section id="gardienne" class="palier">
+<div class="palier-contenu">
+<h2>La Gardienne</h2>
 </div>
 </section>
 
