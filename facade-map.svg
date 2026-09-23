@@ -1,68 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 744 1052">
+<svg class="facade-map"
+     viewBox="0 0 1470 2048"
+     preserveAspectRatio="none">
 
-  <style>
-    .portal{
-      fill:#000;
-      fill-opacity:0.001;
-      cursor:pointer;
-    }
-  </style>
+  <!-- RESPIRER : lucarne ronde gauche -->
+  <g class="portal-group" data-word="Respirer">
+    <a href="#respirer">
+      <path class="portal"
+        d="M242 640
+           C215 665 214 720 245 748
+           C275 776 330 774 356 742
+           C382 710 378 660 348 636
+           C316 610 270 612 242 640 Z"/>
+    </a>
+  </g>
 
-  <!-- Respirer -->
-  <a href="#respirer">
-    <circle class="portal"
-            cx="163"
-            cy="177"
-            r="29"/>
-  </a>
+  <!-- CROÎTRE : lucarne ronde droite -->
+  <g class="portal-group" data-word="Croître">
+    <a href="#croitre">
+      <path class="portal"
+        d="M972 640
+           C944 664 944 719 975 748
+           C1006 776 1062 774 1088 741
+           C1115 709 1110 658 1080 634
+           C1048 609 1001 611 972 640 Z"/>
+    </a>
+  </g>
 
-  <!-- Croître -->
-  <a href="#croitre">
-    <circle class="portal"
-            cx="582"
-            cy="177"
-            r="29"/>
-  </a>
+  <!-- VEILLER : grande fenêtre gauche -->
+  <g class="portal-group" data-word="Veiller">
+    <a href="#veiller">
+      <path class="portal"
+        d="M340 820
+           Q340 750 430 748
+           Q520 750 520 820
+           L520 1195
+           L340 1195 Z"/>
+    </a>
+  </g>
 
-  <!-- Veiller -->
-  <a href="#veiller">
-    <path class="portal"
-      d="M182 286
-         Q182 242 229 242
-         Q276 242 276 286
-         L276 526
-         L182 526 Z"/>
-  </a>
+  <!-- PLONGER : fenêtre centrale -->
+  <g class="portal-group" data-word="Plonger">
+    <a href="#plonger">
+      <path class="portal"
+        d="M650 805
+           Q650 735 735 732
+           Q820 735 820 805
+           L820 1185
+           L650 1185 Z"/>
+    </a>
+  </g>
 
-  <!-- Étreindre -->
-  <a href="#etreindre">
-    <path class="portal"
-      d="M468 286
-         Q468 242 515 242
-         Q562 242 562 286
-         L562 526
-         L468 526 Z"/>
-  </a>
+  <!-- ÉTREINDRE : grande fenêtre droite -->
+  <g class="portal-group" data-word="Étreindre">
+    <a href="#etreindre">
+      <path class="portal"
+        d="M948 820
+           Q948 748 1045 748
+           Q1140 748 1140 820
+           L1140 1195
+           L948 1195 Z"/>
+    </a>
+  </g>
 
-  <!-- Plonger -->
-  <a href="#plonger">
-    <path class="portal"
-      d="M319 390
-         Q319 342 372 342
-         Q425 342 425 390
-         L425 612
-         L319 612 Z"/>
-  </a>
-
-  <!-- La Gardienne -->
-  <a href="#gardienne">
-    <path class="portal"
-      d="M346 654
-         Q346 624 372 624
-         Q398 624 398 654
-         L398 720
-         L346 720 Z"/>
-  </a>
+  <!-- LA GARDIENNE : opaline au-dessus de la porte -->
+  <g class="portal-group" data-word="La Gardienne">
+    <a href="#gardienne">
+      <circle class="portal" cx="735" cy="1240" r="52"/>
+    </a>
+  </g>
 
 </svg>
