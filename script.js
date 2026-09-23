@@ -1,41 +1,35 @@
-const groupes=document.querySelectorAll(".portal-group");
+const portals=document.querySelectorAll(".portal-group");
 
-const lampes=[
-document.querySelector(".lucarne-gauche"),
-document.querySelector(".lucarne-droite"),
-document.querySelector(".fenetre-gauche"),
-document.querySelector(".fenetre-droite"),
-document.querySelector(".porte")
-];
+portals.forEach(group=>{
 
-groupes.forEach((g,i)=>{
+  const word=group.dataset.word;
 
-g.addEventListener("mouseenter",()=>{
+  const bubble=document.createElement("div");
+  bubble.className="portal-bubble";
 
-lampes[i].style.opacity=".95";
+  const txt=document.createElement("div");
+  txt.className="portal-word";
 
-});
+  [...word].forEach((letter,i)=>{
 
-g.addEventListener("mouseleave",()=>{
+    const span=document.createElement("span");
+    span.style.animationDelay=`${i*60}ms`;
+    span.textContent=letter;
+    txt.appendChild(span);
 
-lampes[i].style.opacity="0";
+  });
 
-});
+  bubble.appendChild(txt);
 
-});
+  group.appendChild(bubble);
 
-document.querySelectorAll(".portal-group a").forEach(link=>{
+  group.addEventListener("mousemove",e=>{
 
-link.addEventListener("click",e=>{
+    const rect=group.getBoundingClientRect();
 
-e.preventDefault();
+    bubble.style.left=e.clientX-rect.left-37+"px";
+    bubble.style.top=e.clientY-rect.top-70+"px";
 
-document.querySelector(link.getAttribute("href")).scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-});
+  });
 
 });
