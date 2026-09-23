@@ -1,30 +1,24 @@
-// Respiration des vagues
 
-gsap.to(".wave1",{
+document.querySelectorAll('.portal-group a').forEach(link=>{
 
-  y:-3,
+link.addEventListener('click',e=>{
 
-  duration:8,
+e.preventDefault();
 
-  repeat:-1,
+const cible=document.querySelector(link.getAttribute('href'));
 
-  yoyo:true,
+if(cible){
 
-  ease:"sine.inOut"
+cible.scrollIntoView({
 
-});
+behavior:'smooth',
 
-gsap.to(".wave2",{
-
-  y:4,
-
-  duration:10,
-
-  repeat:-1,
-
-  yoyo:true,
-
-  ease:"sine.inOut"
+block:'start'
 
 });
+
 }
+
+});
+
+});
