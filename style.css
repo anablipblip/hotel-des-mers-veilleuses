@@ -172,78 +172,114 @@ font-size:42px;
 }
 /* ============================
    Veilleuses des chambres
+   V2
 ============================ */
 
 .veilleuse{
+  position:absolute;
 
-position:absolute;
+  pointer-events:auto;
+  cursor:pointer;
 
-opacity:0;
+  border-radius:50px;
 
-pointer-events:none;
+  opacity:1;
 
-transition:opacity .9s ease;
-
-filter:blur(16px);
-
-background:radial-gradient(circle,
-rgba(250,247,236,.95) 0%,
-rgba(233,237,248,.42) 42%,
-rgba(116,129,171,.08) 100%);
+  transition:.45s ease;
 }
 
+/* Lumière intérieure */
+
+.veilleuse::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  border-radius:inherit;
+
+  background:
+    radial-gradient(circle at 50% 35%,
+      rgba(255,255,255,.92) 0%,
+      rgba(218,234,255,.72) 35%,
+      rgba(126,168,255,.24) 75%,
+      transparent 100%);
+
+  filter:blur(8px);
+
+  opacity:0;
+
+  transition:.45s ease;
+}
+
+/* halo extérieur */
+
+.veilleuse::after{
+  content:"";
+
+  position:absolute;
+  inset:-16px;
+
+  border-radius:inherit;
+
+  background:
+    radial-gradient(circle,
+      rgba(142,185,255,.34) 0%,
+      rgba(142,185,255,.08) 65%,
+      transparent 100%);
+
+  filter:blur(18px);
+
+  opacity:0;
+
+  transition:.45s ease;
+}
+
+.veilleuse:hover::before,
+.veilleuse:hover::after{
+  opacity:1;
+}
+
+/* Position des chambres */
+
 .lucarne-gauche{
-left:24%;
-top:13.8%;
-width:10%;
-aspect-ratio:1;
-border-radius:50%;
+  left:24%;
+  top:13.8%;
+  width:10%;
+  aspect-ratio:1;
+  border-radius:50%;
 }
 
 .lucarne-droite{
-left:66%;
-top:13.8%;
-width:10%;
-aspect-ratio:1;
-border-radius:50%;
+  left:66%;
+  top:13.8%;
+  width:10%;
+  aspect-ratio:1;
+  border-radius:50%;
 }
 
 .fenetre-gauche{
-left:32%;
-top:24%;
-width:9%;
-height:26%;
-border-radius:40px;
+  left:32%;
+  top:24%;
+  width:9%;
+  height:26%;
+  border-radius:42px;
 }
 
 .fenetre-droite{
-left:59%;
-top:24%;
-width:9%;
-height:26%;
-border-radius:40px;
+  left:59%;
+  top:24%;
+  width:9%;
+  height:26%;
+  border-radius:42px;
 }
 
 .porte{
-left:45%;
-top:45%;
-width:10%;
-height:24%;
-border-radius:55px;
-}
-/* ===========================
-   Veilleuse V2
-=========================== */
-
-.portal-group{
-  position:relative;
-}
-
-.portal{
-  fill:transparent;
-  stroke:transparent;
-  stroke-width:8;
-  cursor:pointer;
+  left:45%;
+  top:45%;
+  width:10%;
+  height:24%;
+  border-radius:56px;
 }
 
 /* Lumière de la chambre */
