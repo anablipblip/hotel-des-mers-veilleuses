@@ -92,7 +92,44 @@ body{
 
   height:auto;
 }
+/* --------------------------------
+   Carte invisible des portails
+-------------------------------- */
 
+.facade-map{
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+
+  height:100%;
+
+  pointer-events:none;
+}
+
+/* Les formes existent mais restent invisibles */
+
+.portal{
+
+  fill:transparent;
+
+  stroke:transparent;
+
+  stroke-width:8;
+
+  pointer-events:auto;
+
+  transition:fill .25s ease;
+}
+
+/* Préparation du halo futur */
+
+.portal.active{
+
+  fill:rgba(116,155,255,.12);
+}
 /* ---------------------------
    Vagues
 --------------------------- */
