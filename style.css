@@ -170,3 +170,64 @@ font-size:42px;
 }
 
 }
+/* ============================
+   Veilleuses des chambres
+============================ */
+
+.veilleuse{
+
+position:absolute;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:opacity .9s ease;
+
+filter:blur(16px);
+
+background:radial-gradient(circle,
+rgba(250,247,236,.95) 0%,
+rgba(233,237,248,.42) 42%,
+rgba(116,129,171,.08) 100%);
+}
+
+.lucarne-gauche{
+left:24%;
+top:13.8%;
+width:10%;
+aspect-ratio:1;
+border-radius:50%;
+}
+
+.lucarne-droite{
+left:66%;
+top:13.8%;
+width:10%;
+aspect-ratio:1;
+border-radius:50%;
+}
+
+.fenetre-gauche{
+left:32%;
+top:24%;
+width:9%;
+height:26%;
+border-radius:40px;
+}
+
+.fenetre-droite{
+left:59%;
+top:24%;
+width:9%;
+height:26%;
+border-radius:40px;
+}
+
+.porte{
+left:45%;
+top:45%;
+width:10%;
+height:24%;
+border-radius:55px;
+}
