@@ -1,218 +1,168 @@
-/* ---------------------------
-   Base
---------------------------- */
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 html,
 body{
-  margin:0;
-  padding:0;
-  overflow-x:hidden;
-  overflow-y:auto;
+margin:0;
+padding:0;
+overflow-x:hidden;
+overflow-y:auto;
 }
+
 body{
-  background:#fff;
-  color:#1d2f74;
-  font-family:Georgia, serif;
+background:#fff;
+color:#162f74;
+font-family:Georgia,serif;
 }
-/* ---------------------------
-   Surface
---------------------------- */
 
 .surface{
-
-  min-height:100vh;
-
-  display:flex;
-  flex-direction:column;
-
-  align-items:center;
-  justify-content:flex-start;
-
-  padding-top:80px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:70px 20px 50px;
+box-sizing:border-box;
 }
 
-/* ---------------------------
-   Titre
---------------------------- */
-
 .titre{
-  text-align:center;
-  margin-bottom:30px;
+text-align:center;
+margin-bottom:35px;
 }
 
 .titre h1{
-
-  margin:0;
-
-  font-size:clamp(34px,4vw,56px);
-
-  font-weight:500;
+margin:0;
+font-size:clamp(34px,4vw,58px);
+font-weight:500;
 }
 
 .titre p{
-
-  margin-top:10px;
-
-  font-size:14px;
-
-  opacity:.65;
-
-  letter-spacing:.05em;
+margin-top:10px;
+font-size:13px;
+opacity:.7;
+letter-spacing:.05em;
 }
 
-/* ---------------------------
-   Hôtel
---------------------------- */
-
 .hotel-placeholder{
-
-  width:min(92vw,520px);
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
+width:min(92vw,520px);
+display:flex;
+justify-content:center;
 }
 
 .cadre-facade{
-
-  position:relative;
-
-  width:100%;
-
-  overflow:visible;
+position:relative;
+width:100%;
+overflow:visible;
 }
 
 .facade{
-
-  width:100%;
-
-  display:block;
-
-  height:auto;
+width:100%;
+display:block;
+height:auto;
 }
-/* --------------------------------
-   Carte invisible des portails
--------------------------------- */
 
 .facade-map{
-
-  position:absolute;
-
-  inset:0;
-
-  width:100%;
-
-  height:100%;
-opacity:0;
-  pointer-events:none;
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+overflow:visible;
 }
-
-/* Les formes existent mais restent invisibles */
 
 .portal{
-
-  fill:transparent;
-
-  stroke:transparent;
-
-  stroke-width:8;
-
-  pointer-events:auto;
-
-  transition:fill .25s ease;
+fill:transparent;
+stroke:transparent;
+stroke-width:12;
+cursor:pointer;
+transition:.25s ease;
 }
 
-/* Préparation du halo futur */
-
-.portal.active{
-
-  fill:rgba(116,155,255,.12);
-}
-/* ---------------------------
-   Vagues
---------------------------- */
-
-.waves-container{
-
-  width:140%;
-
-  margin-top:-18px;
+.portal-group{
+pointer-events:all;
 }
 
-.waves{
-
-  width:100%;
-
-  height:70px;
-
-  overflow:visible;
+.portal-label{
+opacity:0;
+fill:#3569c8;
+font-size:22px;
+font-family:Georgia,serif;
+text-anchor:middle;
+transition:.25s ease;
+pointer-events:none;
 }
 
-.wave1,
-.wave2{
-
-  fill:none;
-
-  stroke:#8da1d9;
-
-  stroke-width:3;
-
-  stroke-linecap:round;
+.portal-group:hover .portal{
+fill:rgba(90,145,255,.10);
+stroke:rgba(90,145,255,.40);
 }
 
-.wave2{
-
-  opacity:.55;
-
-  stroke-width:2;
+.portal-group:hover .portal-label{
+opacity:1;
 }
 
-/* ---------------------------
-   Invitation
---------------------------- */
+.vagues{
+width:min(92vw,520px);
+margin-top:12px;
+}
+
+.vagues svg{
+width:100%;
+height:42px;
+}
+
+.vagues path{
+fill:none;
+stroke:#6b88d4;
+stroke-width:2.3;
+stroke-linecap:round;
+}
 
 .invitation{
-
-  margin-top:24px;
-
-  margin-bottom:50px;
-
-  font-size:12px;
-
-  letter-spacing:.16em;
-
-  text-transform:lowercase;
-
-  opacity:.55;
+margin-top:18px;
+font-size:12px;
+letter-spacing:.12em;
+opacity:.6;
 }
-/* ==========================
-   Paliers des profondeurs
-========================== */
 
 .palier{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:8vh 10vw;
-  background:#fff;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:70px 20px;
+box-sizing:border-box;
 }
 
 .palier-contenu{
-  width:min(900px,100%);
-  text-align:center;
+max-width:760px;
+text-align:center;
 }
 
 .palier h2{
-  margin:0;
-  font-size:clamp(34px,4vw,56px);
-  font-weight:400;
-  letter-spacing:.05em;
-  color:#1d2f74;
+font-size:clamp(36px,6vw,70px);
+font-weight:400;
+margin:0 0 20px;
+}
+
+.palier p{
+line-height:1.8;
+font-size:18px;
+opacity:.75;
+}
+
+@media(max-width:700px){
+
+.titre h1{
+font-size:38px;
+}
+
+.portal-label{
+font-size:18px;
+}
+
+.palier h2{
+font-size:42px;
+}
+
 }
