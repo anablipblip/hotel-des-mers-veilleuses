@@ -152,7 +152,7 @@ Veilleuses
 
 position:absolute;
 
-pointer-events:none;
+pointer-events:auto;
 
 z-index:3;
 
@@ -184,10 +184,6 @@ filter:blur(8px);
 
 }
 
-.portal:hover + .veilleuse::before,
-.portal:hover~.veilleuse::before{
-opacity:1;
-}
 
 /* Position des veilleuses */
 
@@ -244,6 +240,21 @@ width:9%;
 height:26%;
 
 border-radius:42px;
+
+}
+
+
+.fenetre-centrale{
+
+left:43%;
+
+top:36%;
+
+width:14%;
+
+height:20%;
+
+border-radius:40px;
 
 }
 
