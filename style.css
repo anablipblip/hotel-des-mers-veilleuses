@@ -163,41 +163,6 @@ margin-bottom:10px;
 }
 /* Fenêtres vivantes */
 
-
-.window{
-  position:absolute;
-  overflow:hidden;
-  border-radius:50%;
-  cursor:pointer;
-}
-
-.window-art{
-  width:220%;
-  height:220%;
-  object-fit:cover;
-  opacity:0;
-  transform:scale(1.1);
-  transition:.45s;
-}
-
-.window-left{
-  left:14%;
-  top:19%;
-  width:13%;
-  aspect-ratio:1;
-}
-
-.window-right{
-  right:14%;
-  top:19%;
-  width:13%;
-  aspect-ratio:1;
-}
-
-.window:hover .window-art{
-  opacity:.22;
-  transform:scale(1);
-}
 .cadre-facade{
   position:relative;
   width:min(92vw,520px);
