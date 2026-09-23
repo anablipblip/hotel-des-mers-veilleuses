@@ -47,22 +47,13 @@ letter-spacing:.2em;
 opacity:.6;
 margin-bottom:10px;
 }
+
 .facade{
-  width:min(92vw,780px);
+  width:100%;
   height:auto;
   display:block;
 }
 
-.cadre-facade{
-  width:min(92vw,760px);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:transparent;
-  border:none;
-  padding:0;
-  overflow:visible;
-}
 .hotel-interactif{
   position:relative;
   width:min(92vw,780px);
@@ -172,9 +163,6 @@ margin-bottom:10px;
 }
 /* Fenêtres vivantes */
 
-.cadre-facade{
-  position:relative;
-}
 
 .window{
   position:absolute;
@@ -209,4 +197,10 @@ margin-bottom:10px;
 .window:hover .window-art{
   opacity:.22;
   transform:scale(1);
+}
+.cadre-facade{
+  position:relative;
+  width:min(92vw,520px);
+  margin:0 auto;
+  overflow:visible;
 }
