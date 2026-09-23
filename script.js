@@ -1,23 +1,40 @@
+const groupes=document.querySelectorAll(".portal-group");
 
-document.querySelectorAll('.portal-group a').forEach(link=>{
+const lampes=[
+document.querySelector(".lucarne-gauche"),
+document.querySelector(".lucarne-droite"),
+document.querySelector(".fenetre-gauche"),
+document.querySelector(".fenetre-droite"),
+document.querySelector(".porte")
+];
 
-link.addEventListener('click',e=>{
+groupes.forEach((g,i)=>{
 
-e.preventDefault();
+g.addEventListener("mouseenter",()=>{
 
-const cible=document.querySelector(link.getAttribute('href'));
-
-if(cible){
-
-cible.scrollIntoView({
-
-behavior:'smooth',
-
-block:'start'
+lampes[i].style.opacity=".95";
 
 });
 
-}
+g.addEventListener("mouseleave",()=>{
+
+lampes[i].style.opacity="0";
+
+});
+
+});
+
+document.querySelectorAll(".portal-group a").forEach(link=>{
+
+link.addEventListener("click",e=>{
+
+e.preventDefault();
+
+document.querySelector(link.getAttribute("href")).scrollIntoView({
+
+behavior:"smooth"
+
+});
 
 });
 
