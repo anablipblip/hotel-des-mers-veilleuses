@@ -1,134 +1,124 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Hôtel des Mers Veilleuses</title>
+<title>Hôtel des Mers Veilleuses</title>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
-
 <body>
 
 <section class="surface">
 
-  <header class="titre">
-    <h1>Hôtel des Mers Veilleuses</h1>
-    <p>Chaque fenêtre deviendra un portail.</p>
-  </header>
+<header class="titre">
+<h1>Hôtel des Mers Veilleuses</h1>
+<p>Chaque fenêtre deviendra un portail.</p>
+</header>
 
-  <div class="hotel-placeholder">
+<div class="hotel-placeholder">
 
 <div class="cadre-facade">
 
-  <img
-    src="assets/oeuvres/facade-master.jpg"
-    alt="Façade de l'Hôtel des Mers Veilleuses"
-    class="facade">
+<img
+src="assets/oeuvres/facade-master.jpg"
+alt="Façade de l'Hôtel des Mers Veilleuses"
+class="facade">
 
-  <svg class="facade-map"
-       viewBox="0 0 744 1052"
-       preserveAspectRatio="none">
+<svg class="facade-map"
+viewBox="0 0 744 1052"
+preserveAspectRatio="none">
 
-    <circle class="portal respirer"
-            cx="188" cy="236" r="34"
-            data-title="Respirer"/>
+<g class="portal-group">
+<a href="#respirer">
+<ellipse class="portal" cx="188" cy="238" rx="34" ry="46"/>
+<text class="portal-label" x="188" y="170">Respirer</text>
+</a>
+</g>
 
-    <circle class="portal veiller"
-            cx="553" cy="236" r="34"
-            data-title="Veiller"/>
+<g class="portal-group">
+<a href="#croitre">
+<ellipse class="portal" cx="556" cy="238" rx="34" ry="46"/>
+<text class="portal-label" x="556" y="170">Croître</text>
+</a>
+</g>
 
-    <path class="portal croitre"
-      data-title="Croître"
-      d="M112 430
-         Q112 370 160 370
-         Q208 370 208 430
-         L208 590
-         L112 590 Z"/>
+<g class="portal-group">
+<a href="#veiller">
+<path class="portal"
+d="M214 320 Q214 282 250 282 Q286 282 286 320 L286 540 L214 540 Z"/>
+<text class="portal-label" x="250" y="260">Veiller</text>
+</a>
+</g>
 
-    <path class="portal etreindre"
-      data-title="Étreindre"
-      d="M536 430
-         Q536 370 584 370
-         Q632 370 632 430
-         L632 590
-         L536 590 Z"/>
+<g class="portal-group">
+<a href="#etreindre">
+<path class="portal"
+d="M458 320 Q458 282 494 282 Q530 282 530 320 L530 540 L458 540 Z"/>
+<text class="portal-label" x="494" y="260">Étreindre</text>
+</a>
+</g>
 
-    <path class="portal plonger"
-      data-title="Plonger"
-      d="M318 640
-         Q318 590 372 590
-         Q426 590 426 640
-         L426 790
-         L318 790 Z"/>
+<g class="portal-group">
+<a href="#plonger">
+<path class="portal"
+d="M338 505 Q338 455 372 455 Q406 455 406 505 L406 710 L338 710 Z"/>
+<text class="portal-label" x="372" y="435">Plonger</text>
+</a>
+</g>
 
-  </svg>
+</svg>
 
 </div>
 
-    <div class="waves-container">
+</div>
 
-      <svg class="waves" viewBox="0 0 1200 220" preserveAspectRatio="none">
+<div class="vagues">
+<svg viewBox="0 0 1200 90" preserveAspectRatio="none">
+<path d="M0 55 C120 40 220 70 340 55 C470 40 570 70 690 55 C820 40 930 70 1050 55 C1120 48 1160 60 1200 55"/>
+</svg>
+</div>
 
-        <path class="wave1"
-          d="M0,120
-             C120,90 240,150 360,120
-             C480,90 600,150 720,120
-             C840,90 960,150 1080,120
-             C1140,105 1180,118 1200,120"/>
-
-        <path class="wave2"
-          d="M0,155
-             C150,135 300,175 450,155
-             C600,135 750,175 900,155
-             C1050,135 1140,165 1200,155"/>
-
-      </svg>
-
-    </div>
-
-  </div>
-
-  <div class="invitation">
-    glisser vers les profondeurs
-  </div>
+<p class="invitation">Glisser vers les profondeurs</p>
 
 </section>
 
 <section id="respirer" class="palier">
-  <div class="palier-contenu">
-    <h2>Respirer</h2>
-  </div>
+<div class="palier-contenu">
+<h2>Respirer</h2>
+<p>Ici viendront les premières œuvres baignées de lumière.</p>
+</div>
 </section>
 
 <section id="croitre" class="palier">
-  <div class="palier-contenu">
-    <h2>Croître</h2>
-  </div>
+<div class="palier-contenu">
+<h2>Croître</h2>
+</div>
 </section>
 
 <section id="veiller" class="palier">
-  <div class="palier-contenu">
-    <h2>Veiller</h2>
-  </div>
+<div class="palier-contenu">
+<h2>Veiller</h2>
+</div>
 </section>
 
 <section id="etreindre" class="palier">
-  <div class="palier-contenu">
-    <h2>Étreindre</h2>
-  </div>
+<div class="palier-contenu">
+<h2>Étreindre</h2>
+</div>
 </section>
 
 <section id="plonger" class="palier">
-  <div class="palier-contenu">
-    <h2>Plonger</h2>
-  </div>
+<div class="palier-contenu">
+<h2>Plonger</h2>
+</div>
 </section>
+
+</body>
 
 <script src="script.js"></script>
 
-</body>
 </html>
