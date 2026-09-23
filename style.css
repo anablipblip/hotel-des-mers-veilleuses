@@ -340,3 +340,98 @@ margin:0;
 color:#1d2f74;
 
 }
+/* ===========================
+   Bulles et lettres
+=========================== */
+
+.word-bubble{
+
+position:fixed;
+transform:translate(-50%,-50%) scale(.6);
+
+width:84px;
+height:84px;
+border-radius:50%;
+
+background:rgba(250,247,236,.95);
+backdrop-filter:blur(8px);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-family:Georgia,serif;
+font-size:14px;
+font-style:italic;
+color:#5e6f98;
+
+box-shadow:
+0 0 26px rgba(193,205,229,.55);
+
+opacity:0;
+transition:.45s ease;
+
+pointer-events:none;
+z-index:1000;
+
+}
+
+.word-bubble.show{
+
+opacity:1;
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+.flying-letter{
+
+position:fixed;
+
+font-family:Georgia,serif;
+font-style:italic;
+font-size:19px;
+color:#6c7ea8;
+
+pointer-events:none;
+z-index:1001;
+
+transition:2.8s cubic-bezier(.18,.82,.24,1);
+
+}
+
+.flying-letter.fly{
+
+opacity:0;
+}
+
+.bubble{
+
+position:fixed;
+
+width:10px;
+height:10px;
+border-radius:50%;
+
+background:rgba(220,230,245,.75);
+border:1px solid rgba(150,170,205,.5);
+
+animation:bubble-rise 3.5s linear forwards;
+
+pointer-events:none;
+z-index:999;
+
+}
+
+@keyframes bubble-rise{
+
+to{
+
+transform:
+translate(var(--dx),var(--dy))
+scale(.45);
+
+opacity:0;
+
+}
+
+}
