@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 744 1052">
+
+  <style>
+    .portal{
+      fill:#000;
+      fill-opacity:0.001;
+      cursor:pointer;
+    }
+  </style>
+
+  <!-- Respirer -->
+  <a href="#respirer">
+    <circle class="portal"
+            cx="163"
+            cy="177"
+            r="29"/>
+  </a>
+
+  <!-- Croître -->
+  <a href="#croitre">
+    <circle class="portal"
+            cx="582"
+            cy="177"
+            r="29"/>
+  </a>
+
+  <!-- Veiller -->
+  <a href="#veiller">
+    <path class="portal"
+      d="M182 286
+         Q182 242 229 242
+         Q276 242 276 286
+         L276 526
+         L182 526 Z"/>
+  </a>
+
+  <!-- Étreindre -->
+  <a href="#etreindre">
+    <path class="portal"
+      d="M468 286
+         Q468 242 515 242
+         Q562 242 562 286
+         L562 526
+         L468 526 Z"/>
+  </a>
+
+  <!-- Plonger -->
+  <a href="#plonger">
+    <path class="portal"
+      d="M319 390
+         Q319 342 372 342
+         Q425 342 425 390
+         L425 612
+         L319 612 Z"/>
+  </a>
+
+  <!-- La Gardienne -->
+  <a href="#gardienne">
+    <path class="portal"
+      d="M346 654
+         Q346 624 372 624
+         Q398 624 398 654
+         L398 720
+         L346 720 Z"/>
+  </a>
+
+</svg>
