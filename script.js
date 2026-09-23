@@ -1,34 +1,31 @@
-const portals=document.querySelectorAll(".portal-group");
+const veilleuses = document.querySelectorAll(".veilleuse");
 
-portals.forEach(group=>{
+veilleuses.forEach(v => {
 
-  const word=group.dataset.word;
+  const mot = v.dataset.word;
 
-  const bubble=document.createElement("div");
-  bubble.className="portal-bubble";
+  const bulle = document.createElement("div");
+  bulle.className = "portal-bubble";
 
-  const txt=document.createElement("div");
-  txt.className="portal-word";
+  const texte = document.createElement("div");
+  texte.className = "portal-word";
 
-  [...word].forEach((letter,i)=>{
-
-    const span=document.createElement("span");
-    span.style.animationDelay=`${i*60}ms`;
-    span.textContent=letter;
-    txt.appendChild(span);
-
+  [...mot].forEach((lettre, i) => {
+    const span = document.createElement("span");
+    span.textContent = lettre;
+    span.style.animationDelay = `${i * 60}ms`;
+    texte.appendChild(span);
   });
 
-  bubble.appendChild(txt);
+  bulle.appendChild(texte);
+  v.appendChild(bulle);
 
-  group.appendChild(bubble);
+  v.addEventListener("mousemove", e => {
 
-  group.addEventListener("mousemove",e=>{
+    const r = v.getBoundingClientRect();
 
-    const rect=group.getBoundingClientRect();
-
-    bubble.style.left=e.clientX-rect.left-37+"px";
-    bubble.style.top=e.clientY-rect.top-70+"px";
+    bulle.style.left = e.clientX - r.left - 37 + "px";
+    bulle.style.top = e.clientY - r.top - 70 + "px";
 
   });
 
